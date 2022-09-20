@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" data-name="vs/editor/editor.main"
+        href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/editor/editor.main.min.css">
+    <title>Sorting Techniques</title>
+</head>
+
+<body>
+    <div class="attributes">
+        <div class="dropdown" role='navigation'>
+            <div id="selectedSort"></div>
+            <div class="arrow">▼ </div>
+            <ol class="menu">
+                <li class="menu-item" onClick="changedSortingTechnique('Bubble Sort')">Bubble Sort</li>
+                <li class="menu-item" onClick="changedSortingTechnique('Insertion Sort')">Insertion Sort</li>
+                <li class="menu-item" onClick="changedSortingTechnique('Selection Sort')">Selection Sort</li>
+                <li class="menu-item" onClick="changedSortingTechnique('Quick Sort')">Quick Sort</li>
+                <li class="menu-item" onClick="changedSortingTechnique('Merge Sort')">Merge Sort</li>
+                <li class="menu-item" onClick="changedSortingTechnique('Heap Sort')">Heap Sort</li>
+            </ol>
+        </div>
+        <div class="canvas">
+            <div class="container" id="container">
+            </div>
+        </div>
+        <section class="info">
+            <div id="best">Best complexity: logn</div>
+            <div id="average">Average complexity: n</div>
+            <div id="worst">Worst complexity: n^2</div>
+            <div id="space">Space complexity: n!</div>
+        </section>
+    </div>
+    <div class="code-part">
+        <div class="languages">
+            <button type="button" class="language-buttons first-button first-button-active active PythonCode"
+                id="PythonCode" onClick="ChangeProgrammingLanguage('PythonCode')">Pyhton</button>
+            <button type="button" class="language-buttons CCode" id="CCode"
+                onClick="ChangeProgrammingLanguage('CCode')">C</button>
+            <button type="button" class="language-buttons CppCode" id="CppCode"
+                onClick="ChangeProgrammingLanguage('CppCode')">C++</button>
+            <button type="button" class="language-buttons JavaCode" id="JavaCode"
+                onClick="ChangeProgrammingLanguage('JavaCode')">Java</button>
+        </div>
+        <div id="codeLang" class="code"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.26.1/min/vs/loader.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
